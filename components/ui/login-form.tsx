@@ -1,6 +1,6 @@
 export default function LoginForm() {
     return (
-        <div className="p-8 bg-white bg-opacity-50 rounded-lg shadow-md max-w-sm w-full">
+        <div className="p-8 bg-white bg-opacity-60 rounded-lg shadow-md max-w-sm w-full">
             <form>
                 <div className="mb-4 bg-center flex justify-center items-center">
                     <h1 style={{ fontFamily: "NanumSquare", fontSize: "32px", fontWeight: "bold", color: "blue" }}>
@@ -14,7 +14,8 @@ export default function LoginForm() {
                     <input
                         type="email"
                         id="email"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                        className="mt-1 pl-4 h-10 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                        placeholder="Enter your email"
                     />
                 </div>
                 <div className="mb-6">
@@ -24,9 +25,11 @@ export default function LoginForm() {
                     <input
                         type="password"
                         id="password"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                        className="mt-1 pl-4 h-10 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                        placeholder="Enter your password"
                     />
                 </div>
+                <div className="mb-10"></div>
                 <div className="flex items-center justify-between">
                     <button
                         type="submit"
