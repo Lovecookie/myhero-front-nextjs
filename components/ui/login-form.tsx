@@ -1,3 +1,5 @@
+import DefaultInput from "./default-input";
+
 export default function LoginForm() {
     return (
         <div className="p-8 bg-white bg-opacity-60 rounded-lg shadow-md max-w-sm w-full">
@@ -11,23 +13,13 @@ export default function LoginForm() {
                     <label htmlFor="email" className="block text-sm font-medium text-gray-500">
                         Email
                     </label>
-                    <input
-                        type="email"
-                        id="email"
-                        className="mt-1 pl-4 h-10 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                        placeholder="Enter your email"
-                    />
+                    <DefaultInput type="email" id="email" placeholder="Enter your email" />
                 </div>
                 <div className="mb-6">
                     <label htmlFor="password" className="block text-sm font-medium text-gray-500">
                         Password
                     </label>
-                    <input
-                        type="password"
-                        id="password"
-                        className="mt-1 pl-4 h-10 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                        placeholder="Enter your password"
-                    />
+                    <DefaultInput type="password" id="password" placeholder="Enter your password" />
                 </div>
                 <div className="mb-10"></div>
                 <div className="flex items-center justify-between">
