@@ -22,7 +22,7 @@ export default function FallingStars({ children }: FallingStarsProps) {
             star.style.left = `${Math.random() * 100}vw`;
             star.style.animationDuration = `${Math.random() * 5 + 2}s`;
 
-            const baseColor = chroma("black");
+            const baseColor = chroma("yellow");
             const brightness = Math.random() * 0.5 + 0.75;
             const adjustedColor = baseColor.brighten(brightness - 1);
             star.style.backgroundColor = adjustedColor.css();
