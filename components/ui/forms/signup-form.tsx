@@ -1,36 +1,27 @@
-import DefaultInput from "./default-input";
+import DefaultInput from "../default-input";
+import DefaultLabel from "../default-label";
 
 export default function SignupForm() {
     return (
         <div className="p-8 bg-white bg-opacity-60 rounded-lg shadow-md max-w-sm w-full">
             <form>
                 <div className="mb-4 bg-center flex justify-center items-center">
-                    <h1 style={{ fontFamily: "NanumSquare", fontSize: "32px", fontWeight: "bold", color: "blue" }}>
-                        Sign Up
-                    </h1>
+                    <h1 style={{ fontFamily: "NanumSquare", fontSize: "32px", color: "blue" }}>Sign Up</h1>
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-500">
-                        Email
-                    </label>
+                    <DefaultLabel htmlFor="email" labelName="Email" />
                     <DefaultInput type="email" id="email" placeholder="Enter your email" />
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="nickname" className="block text-sm font-medium text-gray-500">
-                        NickName
-                    </label>
+                    <DefaultLabel htmlFor="nickname" labelName="NickName" />
                     <DefaultInput type="nickname" id="nickname" placeholder="Enter your nickname" />
                 </div>
                 <div className="mb-6">
-                    <label htmlFor="password" className="block text-sm font-medium text-gray-500">
-                        Password
-                    </label>
+                    <DefaultLabel htmlFor="password" labelName="Password" />
                     <DefaultInput type="password" id="password" placeholder="Enter your password" />
                 </div>
                 <div className="mb-6">
-                    <label htmlFor="password" className="block text-sm font-medium text-gray-500">
-                        Confirm password
-                    </label>
+                    <DefaultLabel htmlFor="password" labelName="Confirm password" />
                     <DefaultInput type="password" id="password" placeholder="Enter your password" />
                 </div>
                 <div className="mb-10"></div>

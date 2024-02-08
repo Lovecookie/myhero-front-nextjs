@@ -1,5 +1,5 @@
 import FallingStars from "@/components/falling-stars";
-import LoginForm from "@/components/ui/login-form";
+import LoginForm from "@/components/ui/forms/login-form";
 
 import Image from "next/image";
 

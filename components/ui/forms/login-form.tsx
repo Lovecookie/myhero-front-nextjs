@@ -1,25 +1,30 @@
 import Link from "next/link";
-import DefaultInput from "./default-input";
+import DefaultInput from "../default-input";
+import { CommonFont } from "@/constants/common-font";
+import DefaultLabel from "../default-label";
 
 export default function LoginForm() {
     return (
         <div className="p-8 bg-white bg-opacity-60 rounded-lg shadow-md max-w-sm w-full">
             <form>
                 <div className="mb-4 bg-center flex justify-center items-center">
-                    <h1 style={{ fontFamily: "NanumSquare", fontSize: "24px", fontWeight: "bold", color: "blue" }}>
+                    <h1
+                        style={{
+                            fontFamily: CommonFont.LoginFontFamily,
+                            fontSize: "24px",
+                            fontWeight: "bold",
+                            color: "blue",
+                        }}
+                    >
                         What should I wear today?
                     </h1>
                 </div>
                 <div className="mb-4">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-500">
-                        Email
-                    </label>
+                    <DefaultLabel htmlFor="email" labelName="Email" />
                     <DefaultInput type="email" id="email" placeholder="Enter your email" />
                 </div>
                 <div className="mb-6">
-                    <label htmlFor="password" className="block text-sm font-medium text-gray-500">
-                        Password
-                    </label>
+                    <DefaultLabel htmlFor="password" labelName="Password" />
                     <DefaultInput type="password" id="password" placeholder="Enter your password" />
                 </div>
                 <div className="mb-10"></div>
@@ -30,7 +35,6 @@ export default function LoginForm() {
                     >
                         Submit
                     </button>
-
                     <div className="flex">
                         <span className="text-sm">
                             Don&apos;t have an account?{" "}
