@@ -6,8 +6,8 @@ export default function LoginForm() {
         <div className="p-8 bg-white bg-opacity-60 rounded-lg shadow-md max-w-sm w-full">
             <form>
                 <div className="mb-4 bg-center flex justify-center items-center">
-                    <h1 style={{ fontFamily: "NanumSquare", fontSize: "32px", fontWeight: "bold", color: "blue" }}>
-                        마이 스타일러
+                    <h1 style={{ fontFamily: "NanumSquare", fontSize: "24px", fontWeight: "bold", color: "blue" }}>
+                        What should I wear today?
                     </h1>
                 </div>
                 <div className="mb-4">
