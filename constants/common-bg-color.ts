@@ -8,7 +8,7 @@ import chroma from "chroma-js";
     https://tailwindcss.com/docs/background-color
 */
 
-const CommonBgColor = {
+export const CommonBgColor = {
     Primary: "bg-rose-500",
     Secondary: "bg-rose-300",
 };

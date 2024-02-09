@@ -1,5 +1,5 @@
-import DefaultInput from "../default-input";
-import DefaultLabel from "../default-label";
+import DefaultInput from "../input/default-input";
+import DefaultLabel from "../input/default-label";
 
 export default function SignupForm() {
     return (
@@ -10,19 +10,24 @@ export default function SignupForm() {
                 </div>
                 <div className="mb-4">
                     <DefaultLabel htmlFor="email" labelName="Email" />
-                    <DefaultInput type="email" id="email" placeholder="Enter your email" />
+                    <DefaultInput type="email" id="email" name="email" placeholder="Enter your email" />
                 </div>
                 <div className="mb-4">
                     <DefaultLabel htmlFor="nickname" labelName="NickName" />
-                    <DefaultInput type="nickname" id="nickname" placeholder="Enter your nickname" />
+                    <DefaultInput type="nickname" id="nickname" name="nickname" placeholder="Enter your nickname" />
                 </div>
                 <div className="mb-6">
                     <DefaultLabel htmlFor="password" labelName="Password" />
-                    <DefaultInput type="password" id="password" placeholder="Enter your password" />
+                    <DefaultInput type="password" id="password" name="password" placeholder="Enter your password" />
                 </div>
                 <div className="mb-6">
                     <DefaultLabel htmlFor="password" labelName="Confirm password" />
-                    <DefaultInput type="password" id="password" placeholder="Enter your password" />
+                    <DefaultInput
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Enter your password"
+                    />
                 </div>
                 <div className="mb-10"></div>
                 <div className="flex items-center justify-between">
