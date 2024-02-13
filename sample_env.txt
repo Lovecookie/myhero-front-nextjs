@@ -1,0 +1,8 @@
+# '.env'
+# '.env.what_ever'
+# '.env.local'
+# '.env.development'
+# '.env.production'
+
+HOST_URL=http://HOST:PORT
+
