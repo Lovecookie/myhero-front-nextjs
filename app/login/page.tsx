@@ -1,6 +1,6 @@
 import FallingStars from "@/components/falling-stars";
 import LoginForm from "@/components/form/login-form";
-import { IResponseInfoWith, LoginUser } from "@/interfaces/resposne";
+import { IResponseInfoWith, LoginUser } from "@/interfaces/response";
 import { TOptional } from "@/interfaces/util/optional";
 import { useRouter } from "next/router";
 

@@ -1,6 +1,6 @@
 "use server";
 
-import { IResponseInfoWith, LoginUser, ResponseError, ResponseSuccess } from "@/interfaces/resposne";
+import { IResponseInfoWith, LoginUser, ResponseError, ResponseSuccess } from "@/interfaces/response";
 import { TOptional } from "@/interfaces/util/optional";
 import { cookies } from "next/headers";
 
@@ -54,5 +54,6 @@ export async function getUserBasic() {
     }
 
     const convertedData = JSON.parse(userBasic.value);
+
     return ResponseSuccess(convertedData);
 }

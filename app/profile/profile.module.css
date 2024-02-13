@@ -1,0 +1,32 @@
+.profileContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: #5d3b09; /* Elegant color example */
+}
+
+.avatarSection {
+    flex: 2;
+    background-color: #ead2ac; /* Soft cream background */
+    padding: 20px;
+}
+
+.avatarPlaceholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #a26769; /* Rose gold color for contrast */
+    margin-bottom: 20px;
+}
+
+.userInfo {
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: #957dad; /* Soft purple for information rectangles */
+}
+
+.detailsSection {
+    flex: 1;
+    background-color: #d3cedf; /* Light purple background */
+    padding: 20px;
+}

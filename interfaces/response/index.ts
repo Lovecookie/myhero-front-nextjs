@@ -1,3 +1,5 @@
+import { NextApiResponse } from "next";
+
 export interface IResponseInfoWith<Data = any> {
     code: number;
     message: string;
@@ -12,8 +14,14 @@ export type LoginUser = {
 
 export type UserProfile = {
     userkey: number;
-    email: string;
     nickname: string;
+    profileImage: string;
+    place: string;
+};
+
+export type ProfileDetail = {
+    userProfile: UserProfile;
+    introduction: string;
 };
 
 export function ResponseError(code: number, message: string) {
