@@ -58,110 +58,110 @@ interface IProfileFormProps {
     profileDetail: ProfileDetail;
 }
 
-interface IProfileCardHeadProps {
-    profileDetail: ProfileDetail;
-}
+// interface IProfileCardHeadProps {
+//     profileDetail: ProfileDetail;
+// }
 
-export function ProfileCardHead({ profileDetail }: IProfileCardHeadProps) {
-    return (
-        <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-4">
-                <div className="rounded-full overflow-hidden border w-32 h-32">
-                    <div className="flex items-center gap-4">
-                        <ProfileImage
-                            src={profileDetail.userProfile.profileImage || PlaceholderPic256}
-                            alt="Profile image"
-                            width={256}
-                            height={256}
-                        />
-                    </div>
-                </div>
-                <div className="flex flex-col">
-                    <h1 className="text-3xl font-bold">{profileDetail.userProfile.nickname}</h1>
-                    <div className="flex flex-row gap-2">
-                        <MapPinIcon className="h-6 w-6 text-blue-500" />
-                        <p className="text-gray-500 dark:text-gray-400">Senior Software Engineer</p>
-                    </div>
-                </div>
-            </div>
-            <p className="text-base leading-loose text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                {profileDetail.introduction}
-            </p>
-        </div>
-    );
-}
+// export function ProfileCardHead({ profileDetail }: IProfileCardHeadProps) {
+//     return (
+//         <div className="flex flex-col gap-2">
+//             <div className="flex items-center gap-4">
+//                 <div className="rounded-full overflow-hidden border w-32 h-32">
+//                     <div className="flex items-center gap-4">
+//                         <ProfileImage
+//                             src={profileDetail.userProfile.profileImage || PlaceholderPic256}
+//                             alt="Profile image"
+//                             width={256}
+//                             height={256}
+//                         />
+//                     </div>
+//                 </div>
+//                 <div className="flex flex-col">
+//                     <h1 className="text-3xl font-bold">{profileDetail.userProfile.nickname}</h1>
+//                     <div className="flex flex-row gap-2">
+//                         <MapPinIcon className="h-6 w-6 text-blue-500" />
+//                         <p className="text-gray-500 dark:text-gray-400">Senior Software Engineer</p>
+//                     </div>
+//                 </div>
+//             </div>
+//             <p className="text-base leading-loose text-gray-500 md:text-xl/relaxed dark:text-gray-400">
+//                 {profileDetail.introduction}
+//             </p>
+//         </div>
+//     );
+// }
 
-export function ProfileSubCard() {
-    return (
-        <div className="flex items-center gap-4">
-            <div className="rounded-full overflow-hidden border w-12 h-12">
-                <Image
-                    src={PlaceholderPic}
-                    alt="Profile image"
-                    className="object-cover rounded-full border-0 object-center"
-                    height={48}
-                    width={48}
-                ></Image>
-            </div>
-            <div className="flex flex-col">
-                <h3 className="font-semibold">Bob Smith</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Software Engineer</p>
-            </div>
-        </div>
-    );
-}
+// export function ProfileSubCard() {
+//     return (
+//         <div className="flex items-center gap-4">
+//             <div className="rounded-full overflow-hidden border w-12 h-12">
+//                 <Image
+//                     src={PlaceholderPic}
+//                     alt="Profile image"
+//                     className="object-cover rounded-full border-0 object-center"
+//                     height={48}
+//                     width={48}
+//                 ></Image>
+//             </div>
+//             <div className="flex flex-col">
+//                 <h3 className="font-semibold">Bob Smith</h3>
+//                 <p className="text-sm text-gray-500 dark:text-gray-400">Software Engineer</p>
+//             </div>
+//         </div>
+//     );
+// }
 
-export function ProfileCardCrewList() {
-    return (
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
-            <div className="flex items-center gap-4">
-                <div className="rounded-full overflow-hidden border w-12 h-12">
-                    <Image
-                        src={PlaceholderPic}
-                        alt="Profile image"
-                        className="object-cover rounded-full border-0 object-center"
-                        height={48}
-                        width={48}
-                    ></Image>
-                </div>
-                <div className="flex flex-col">
-                    <h3 className="font-semibold">Bob Smith</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Software Engineer</p>
-                </div>
-            </div>
-            <div className="flex items-center gap-4">
-                <div className="rounded-full overflow-hidden border w-12 h-12">
-                    <Image
-                        src={PlaceholderPic}
-                        alt="Profile image"
-                        className="object-cover rounded-full border-0 object-center"
-                        height={48}
-                        width={48}
-                    ></Image>
-                </div>
-                <div className="flex flex-col">
-                    <h3 className="font-semibold">Ella Davis</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Product Designer</p>
-                </div>
-            </div>
-            <div className="flex items-center gap-4">
-                <div className="rounded-full overflow-hidden border w-12 h-12">
-                    <Image
-                        src={PlaceholderPic}
-                        alt="Profile image"
-                        className="object-cover rounded-full border-0 object-center"
-                        height={48}
-                        width={48}
-                    ></Image>
-                </div>
-                <div className="flex flex-col">
-                    <h3 className="font-semibold">Charlie Brown</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Marketing Manager</p>
-                </div>
-            </div>
-        </div>
-    );
-}
+// export function ProfileCardCrewList() {
+//     return (
+//         <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
+//             <div className="flex items-center gap-4">
+//                 <div className="rounded-full overflow-hidden border w-12 h-12">
+//                     <Image
+//                         src={PlaceholderPic}
+//                         alt="Profile image"
+//                         className="object-cover rounded-full border-0 object-center"
+//                         height={48}
+//                         width={48}
+//                     ></Image>
+//                 </div>
+//                 <div className="flex flex-col">
+//                     <h3 className="font-semibold">Bob Smith</h3>
+//                     <p className="text-sm text-gray-500 dark:text-gray-400">Software Engineer</p>
+//                 </div>
+//             </div>
+//             <div className="flex items-center gap-4">
+//                 <div className="rounded-full overflow-hidden border w-12 h-12">
+//                     <Image
+//                         src={PlaceholderPic}
+//                         alt="Profile image"
+//                         className="object-cover rounded-full border-0 object-center"
+//                         height={48}
+//                         width={48}
+//                     ></Image>
+//                 </div>
+//                 <div className="flex flex-col">
+//                     <h3 className="font-semibold">Ella Davis</h3>
+//                     <p className="text-sm text-gray-500 dark:text-gray-400">Product Designer</p>
+//                 </div>
+//             </div>
+//             <div className="flex items-center gap-4">
+//                 <div className="rounded-full overflow-hidden border w-12 h-12">
+//                     <Image
+//                         src={PlaceholderPic}
+//                         alt="Profile image"
+//                         className="object-cover rounded-full border-0 object-center"
+//                         height={48}
+//                         width={48}
+//                     ></Image>
+//                 </div>
+//                 <div className="flex flex-col">
+//                     <h3 className="font-semibold">Charlie Brown</h3>
+//                     <p className="text-sm text-gray-500 dark:text-gray-400">Marketing Manager</p>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
 
 function ProfileForm({ profileDetail }: IProfileFormProps) {
     return (
