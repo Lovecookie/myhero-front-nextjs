@@ -6,8 +6,9 @@ import DefaultInput from "../input/default-input";
 import DefaultLabel from "../input/default-label";
 
 import Link from "next/link";
-import { requestLogin } from "@/app/lib/action";
+import { requestLogin } from "@/app/lib/user-action";
 import { useRouter } from "next/navigation";
+import { IResponseInfoWith, LoginUser } from "@/interfaces/resposne";
 
 export default function LoginForm({ callbackUrl }: { callbackUrl: string }) {
     const router = useRouter();
@@ -19,14 +20,13 @@ export default function LoginForm({ callbackUrl }: { callbackUrl: string }) {
         const email = formData.get("email") as string;
         const password = formData.get("password") as string;
 
-        const response = await requestLogin(email, password);
-        if (response.code !== 0 && response.data === undefined) {
+        const response: IResponseInfoWith<LoginUser> = await requestLogin(email, password);
+        if (!response || response.code !== 0 || response.data === undefined) {
             alert("Login failed");
             return;
         }
 
-        console.log(`response : ${response.data}`);
-        console.log(`callbackUrl : ${callbackUrl}`);
+        console.log("called LoginForm");
 
         router.push(callbackUrl);
     };
@@ -65,7 +65,7 @@ export default function LoginForm({ callbackUrl }: { callbackUrl: string }) {
                         type="submit"
                         className="px-4 py-2 text-sm text-white bg-indigo-600 rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     >
-                        Sing In
+                        Login
                     </button>
                     <div className="flex">
                         <span className="text-sm">

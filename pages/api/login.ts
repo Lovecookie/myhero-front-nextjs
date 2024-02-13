@@ -12,8 +12,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<IRespo
         return;
     }
 
+    const userkey = 1;
     const nickname = "smbaek";
     const { email, password }: LoginRequest = req.body;
 
-    res.status(200).json(successStatus({ email, nickname } as LoginUser));
+    res.status(200).json(successStatus({ userkey, email, nickname } as LoginUser));
 }
