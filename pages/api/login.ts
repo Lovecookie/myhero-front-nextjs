@@ -1,9 +1,9 @@
 import { errorStatus, isValidPost, successStatus } from "@/interfaces";
 import { LoginRequest } from "@/interfaces/request";
-import { IResponseInfoWith, LoginUser } from "@/interfaces/response";
+import { IResponseWith, LoginUser } from "@/interfaces/response";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<IResponseInfoWith<LoginUser>>) {
+export default function handler(req: NextApiRequest, res: NextApiResponse<IResponseWith<LoginUser>>) {
     console.log(req.body);
 
     if (!isValidPost(req)) {

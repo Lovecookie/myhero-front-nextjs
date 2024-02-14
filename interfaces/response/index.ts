@@ -1,6 +1,6 @@
 import { NextApiResponse } from "next";
 
-export interface IResponseInfoWith<Data = any> {
+export interface IResponseWith<Data = any> {
     code: number;
     message: string;
     data?: Data;
@@ -22,6 +22,12 @@ export type UserProfile = {
 export type ProfileDetail = {
     userProfile: UserProfile;
     introduction: string;
+};
+
+export type ProfileDetailWithCrew = {
+    userProfile: UserProfile;
+    introduction: string;
+    crew: UserProfile[];
 };
 
 export function ResponseError(code: number, message: string) {

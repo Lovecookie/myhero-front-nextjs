@@ -1,5 +1,5 @@
 import { NextApiRequest } from "next";
-import { IResponseInfoWith } from "./response";
+import { IResponseWith } from "./response";
 
 export function isValidPost(req: NextApiRequest) {
     return req.method === "POST";
@@ -21,7 +21,7 @@ export function errorStatus(code: number, message: string) {
     return {
         code,
         message,
-    } as IResponseInfoWith<any>;
+    } as IResponseWith<any>;
 }
 
 export function successStatus(data: any) {
@@ -29,5 +29,5 @@ export function successStatus(data: any) {
         code: 0,
         message: "",
         data,
-    } as IResponseInfoWith<any>;
+    } as IResponseWith<any>;
 }

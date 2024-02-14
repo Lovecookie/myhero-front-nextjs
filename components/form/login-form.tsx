@@ -8,7 +8,7 @@ import DefaultLabel from "../input/default-label";
 import Link from "next/link";
 import { requestLogin } from "@/app/lib/user-action";
 import { useRouter } from "next/navigation";
-import { IResponseInfoWith, LoginUser } from "@/interfaces/response";
+import { IResponseWith, LoginUser } from "@/interfaces/response";
 
 export default function LoginForm({ callbackUrl }: { callbackUrl: string }) {
     const router = useRouter();
@@ -20,7 +20,7 @@ export default function LoginForm({ callbackUrl }: { callbackUrl: string }) {
         const email = formData.get("email") as string;
         const password = formData.get("password") as string;
 
-        const response: IResponseInfoWith<LoginUser> = await requestLogin(email, password);
+        const response: IResponseWith<LoginUser> = await requestLogin(email, password);
         if (!response || response.code !== 0 || response.data === undefined) {
             alert("Login failed");
             return;
